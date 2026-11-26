@@ -1,0 +1,497 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <Body>
+    <ReportItems>
+      <Textbox Name="Title">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>How far ahead can we forecast passenger demand?</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>23pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.00in</Top>
+        <Left>0.00in</Left>
+        <Width>9.00in</Width>
+        <Height>0.45in</Height>
+      </Textbox>
+      <Textbox Name="Subtitle">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>AirPassengers   /   82 forecast origins   /   Mean absolute error in thousands of passengers</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.58in</Top>
+        <Left>0.00in</Left>
+        <Width>9.00in</Width>
+        <Height>0.35in</Height>
+      </Textbox>
+      <Textbox Name="Header0">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Forecast model</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <Color>#096555</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.25in</Top>
+        <Left>0.00in</Left>
+        <Width>4.50in</Width>
+        <Height>0.32in</Height>
+      </Textbox>
+      <Textbox Name="Header1">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>1 month ahead</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <Color>#096555</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.25in</Top>
+        <Left>4.60in</Left>
+        <Width>2.00in</Width>
+        <Height>0.32in</Height>
+      </Textbox>
+      <Textbox Name="Header2">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>3 months ahead</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <Color>#096555</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.25in</Top>
+        <Left>6.70in</Left>
+        <Width>2.00in</Width>
+        <Height>0.32in</Height>
+      </Textbox>
+      <Textbox Name="Model0">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Holt–Winters on log counts</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.72in</Top>
+        <Left>0.00in</Left>
+        <Width>4.50in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Error0H1">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>10.67</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.72in</Top>
+        <Left>4.60in</Left>
+        <Width>1.80in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Error0H3">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>14.72</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.72in</Top>
+        <Left>6.70in</Left>
+        <Width>1.80in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Model1">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Growth-adjusted seasonal</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.11in</Top>
+        <Left>0.00in</Left>
+        <Width>4.50in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Error1H1">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>14.22</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.11in</Top>
+        <Left>4.60in</Left>
+        <Width>1.80in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Error1H3">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>16.67</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.11in</Top>
+        <Left>6.70in</Left>
+        <Width>1.80in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Model2">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Log-linear seasonal trend</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.50in</Top>
+        <Left>0.00in</Left>
+        <Width>4.50in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Error2H1">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>20.01</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.50in</Top>
+        <Left>4.60in</Left>
+        <Width>1.80in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Error2H3">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>21.23</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.50in</Top>
+        <Left>6.70in</Left>
+        <Width>1.80in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Model3">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Same month last year</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.89in</Top>
+        <Left>0.00in</Left>
+        <Width>4.50in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Error3H1">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>36.50</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.89in</Top>
+        <Left>4.60in</Left>
+        <Width>1.80in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Error3H3">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>36.98</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.89in</Top>
+        <Left>6.70in</Left>
+        <Width>1.80in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Model4">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Last observed month</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>3.28in</Top>
+        <Left>0.00in</Left>
+        <Width>4.50in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Error4H1">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>33.39</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>3.28in</Top>
+        <Left>4.60in</Left>
+        <Width>1.80in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Error4H3">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>67.61</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>3.28in</Top>
+        <Left>6.70in</Left>
+        <Width>1.80in</Width>
+        <Height>0.30in</Height>
+      </Textbox>
+      <Textbox Name="Finding">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>The three-month ranking depends on the fit</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>3.95in</Top>
+        <Left>0.00in</Left>
+        <Width>9.00in</Width>
+        <Height>0.40in</Height>
+      </Textbox>
+      <Textbox Name="Detail">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>A separate statsmodels check gave Holt–Winters errors of 11.28 and 17.00. At three months the growth adjustment scored 16.67, reversing their order.</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>4.43in</Top>
+        <Left>0.00in</Left>
+        <Width>9.00in</Width>
+        <Height>0.65in</Height>
+      </Textbox>
+      <Textbox Name="Case">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>March 1960   /   A seasonal rebound that failed to materialize</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>5.22in</Top>
+        <Left>0.00in</Left>
+        <Width>9.00in</Width>
+        <Height>0.45in</Height>
+      </Textbox>
+      <Textbox Name="CaseDetail">
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>One month ahead, Holt–Winters forecast 466 thousand passengers. Actual demand was 419 thousand, an overestimate of about 47 thousand.</Value>
+                <Style>
+                  <FontFamily>Segoe UI</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#17354A</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+          </Paragraph>
+        </Paragraphs>
+        <Top>5.72in</Top>
+        <Left>0.00in</Left>
+        <Width>9.00in</Width>
+        <Height>0.65in</Height>
+      </Textbox>
+    </ReportItems>
+    <Height>6.5in</Height>
+  </Body>
+  <Width>9in</Width>
+  <Page>
+    <PageHeight>8.5in</PageHeight>
+    <PageWidth>11in</PageWidth>
+    <LeftMargin>0.75in</LeftMargin>
+    <RightMargin>0.75in</RightMargin>
+    <TopMargin>0.75in</TopMargin>
+    <BottomMargin>0.75in</BottomMargin>
+  </Page>
+</Report>
