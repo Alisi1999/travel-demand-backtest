@@ -14,11 +14,11 @@ Mean absolute error (MAE), in thousands of passengers, across 82 common forecast
 | Log-linear trend with calendar-month effects | 20.01 | 21.23 |
 | Holt-Winters on log counts | **10.67** | **14.72** |
 
-The project’s Holt-Winters fit scored lowest in this backtest. An independent statsmodels cross-check supplied during review scored 11.28 at one month and 17.00 at three months. Both fits beat growth adjustment at one month. At three months the ranking reverses across implementations, so the evidence for preferring Holt-Winters there is sensitive to fitting choices. One month ahead it missed by about 10,670 passengers on average, compared with 14,220 for growth adjustment. Last month’s value beat last year’s at one month ahead but performed worst at three months. That reversal matters when choosing a planning horizon.
+The project’s Holt-Winters fit scored lowest in this backtest. The reproducible statsmodels cross-check scored 11.28 at one month and 17.00 at three months. Both fits beat growth adjustment at one month. At three months the ranking reverses across implementations, so the evidence for preferring Holt-Winters there is sensitive to fitting choices. One month ahead it missed by about 10,670 passengers on average, compared with 14,220 for growth adjustment. Last month’s value beat last year’s at one month ahead but performed worst at three months. That reversal matters when choosing a planning horizon.
 
 ## Forecast review
 
-Open [Forecast-review.rdl](report/Forecast-review.rdl) in Power BI Report Builder. This one-page paginated report is a snapshot. Run `python report/build.py` after updating the CSV to regenerate its MAE table. The separate statsmodels comparison is reviewer-reported.
+Open [Forecast-review.rdl](report/Forecast-review.rdl) in Power BI Report Builder. This one-page paginated report is a snapshot. Run `python report/build.py` after updating the CSV to regenerate its MAE table. To reproduce the comparison, install `statsmodels==0.14.6` alongside the project requirements and run `python check_statsmodels.py`. The script fits a log-additive model with estimated initial states at each origin recorded in the backtest.
 
 March 1960 was the project's largest one-month Holt-Winters miss. From February’s 391 thousand passengers, the forecast implied a rise of about 75 thousand. The observed rise was only 28 thousand, to 419 thousand. The model anticipated the direction but overstated the rebound. August 1958 missed in the other direction (469 thousand forecast against 505 thousand actual). The series alone cannot establish what caused either miss.
 
