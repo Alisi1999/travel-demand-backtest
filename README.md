@@ -16,6 +16,10 @@ Mean absolute error (MAE), in thousands of passengers, across 82 common forecast
 
 The project’s Holt-Winters fit scored lowest in this backtest. The reproducible statsmodels cross-check scored 11.28 at one month and 17.00 at three months. Both fits beat growth adjustment at one month. At three months the ranking reverses across implementations, so the evidence for preferring Holt-Winters there is sensitive to fitting choices. One month ahead it missed by about 10,670 passengers on average, compared with 14,220 for growth adjustment. Last month’s value beat last year’s at one month ahead but performed worst at three months. That reversal matters when choosing a planning horizon.
 
+![One-month-ahead forecasts vs actual](report/forecast_one_month.svg)
+
+Both models follow the seasonal pattern closely. The two largest Holt-Winters misses are marked. To redraw the chart after rerunning the backtest, run `python plot_forecast.py` (standard library only).
+
 ## Forecast review
 
 Open [Forecast-review.rdl](report/Forecast-review.rdl) in Power BI Report Builder. This one-page paginated report is a snapshot. Run `python report/build.py` after updating the CSV to regenerate its MAE table. To reproduce the comparison, install `statsmodels==0.14.6` alongside the project requirements and run `python check_statsmodels.py`. The script fits a log-additive model with estimated initial states at each origin recorded in the backtest.
